@@ -28,15 +28,27 @@ class auto:
         else :
             print("Ya dejame descansar por favor")
 
-auto1=auto("Toyota","Corolla",2022)
-auto1.mostrar_informacion()
-auto1.actualizar_kilometraje(100000)
-auto1.mostrar_informacion()
-auto1.actualizar_kilometraje(3)
-auto1.mostrar_informacion()
-auto1.realizar_viaje(100000)
-auto1.mostrar_informacion()
-auto1.realizar_viaje(-100)
-auto1.mostrar_informacion()
-auto1.estado_auto()
+    @classmethod
+    def auto_toyota (cls):
+        marca = "Toyota"
+        modelo = "Yaris"
+        año = 2024
+        return cls(marca, modelo, año)
+    
+    @staticmethod
+    def comparar_KM (auto1, auto2):
+        if auto1.kilometraje ==  auto2.kilometraje:
+            return "El kilometraje es similar"
+        return "El kilometraje no es similar"
 
+    @classmethod
+    def auto_gran_vitara (cls, marca):
+        modelo = "Gran Vitara"
+        año = 2024
+        return cls(marca, modelo, año)
+    
+    @staticmethod
+    def comparar_modelo (auto1, auto2):
+        if auto1.modelo ==  auto2.modelo:
+            return "El modelo es igual"
+        return "El modelo no es igual"
