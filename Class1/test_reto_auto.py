@@ -20,9 +20,6 @@ for numero in range(1,4):
 print(auto.comparar_modelo(auto1, auto2))
 
 
-
-
-
 # auto1=auto("Toyota","Corolla",2022)
 # auto1.mostrar_informacion()
 # auto1.actualizar_kilometraje(100000)
