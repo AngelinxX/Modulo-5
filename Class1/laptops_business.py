@@ -7,6 +7,9 @@ class Laptop_business(Laptop):
         self.espacio_de_disco = espacio_de_disco
         self.duracion_bateria = duracion_bateria
 
+    def __str__(self) -> str:
+        return f"Marca: {self.marca} \n Procesador: {self.procesador} \n Memoria: {self.memoria} \n Espacio de disco: {self.espacio_de_disco} \n Duracion de bateria: {self.duracion_bateria} \n Costo:{self.costo} \n Impuesto: {self.impuesto} \n"
+
     def realizar_diagnostico_sistema(self):
         resultado_diagnostico = super().realizar_diagnostico_sistema()
         resultado_red = self.verificar_conectividad_red()
